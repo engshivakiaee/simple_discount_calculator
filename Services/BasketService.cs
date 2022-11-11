@@ -32,22 +32,14 @@ public class BasketService : IBasketService
 
             if (discount != null && (discount?.ValidUntil ?? DateTime.MaxValue) >= DateTime.Now)
             {
-                switch (discount?.DiscountType)
-                {
-                    case DiscountType.Amount:
-                        total += (cartItem.Product.Price - discount.DiscountAmount) * cartItem.Quantity;
-                        break;
-                    case DiscountType.Percentage:
-                        total += (cartItem.Product.Price - (cartItem.Product.Price * (discount.DiscountAmount / 100))) * cartItem.Quantity;
-                        break;
-                    case DiscountType.TwoForOne:
-                        total += (cartItem.Product.Price * (cartItem.Quantity / 2)) + (cartItem.Product.Price * (cartItem.Quantity % 2));
-                        break;
-                    default:
-                        break;
-                }
-            }
-            else
+                total += discount?.DiscountType switch {
+                    DiscountType.Amount => (cartItem.Product.Price - discount.DiscountAmount) * cartItem.Quantity,
+                    DiscountType.Percentage => (cartItem.Product.Price - (cartItem.Product.Price * (discount.DiscountAmount / 100))) * cartItem.Quantity,
+                    DiscountType.TwoForOne => (cartItem.Product.Price * (cartItem.Quantity / 2)) + (cartItem.Product.Price * (cartItem.Quantity % 2)),
+                    _ => 0  
+                };
+            } 
+            else 
             {
                 total += cartItem.Product.Price * cartItem.Quantity;
             }
