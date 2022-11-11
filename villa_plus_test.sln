@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "villa_plus_test", "villa_plus_test.csproj", "{7D5B1402-0EC9-47DC-BA6E-401F84978EA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D5B1402-0EC9-47DC-BA6E-401F84978EA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D5B1402-0EC9-47DC-BA6E-401F84978EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D5B1402-0EC9-47DC-BA6E-401F84978EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D5B1402-0EC9-47DC-BA6E-401F84978EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A08488D1-EE72-4723-9221-B9ACCFB57293}
+	EndGlobalSection
+EndGlobal
