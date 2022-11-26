@@ -1,4 +1,4 @@
-# villa_plus_test
+# simple_discount_calculator_shopping_basket
 
 Correctly calculating the total price of the items in a basket, including discounts.
 
